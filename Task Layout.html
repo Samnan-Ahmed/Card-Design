@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            background-color: #1d2732;
+            color: whitesmoke;
+            padding: 15px;
+            justify-content: space-between;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0px 10px;
+            margin-top: 3px;
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            color: #00BFFF;
+        }
+
+        main {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+            background-color: #364246;
+        }
+
+        .left {
+            flex: 2;
+        }
+
+        .right {
+            flex: 2;
+            text-align: center;
+        }
+
+        .right h1 {
+            font-size: 50px;
+            color: #4a6f97;
+        }
+
+        .right p {
+            font-size: 25px;
+            line-height: 32px;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        .left img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+
+        }
+
+        footer {
+            background-color: #1d2732;
+            color: whitesmoke;
+            padding: 15px;
+            height: 4vh;
+            text-align: center;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Samnan Ahmed</h1>
+        <nav>
+            <a href="#" target="_blank">Home</a>
+            <a href="#" target="_blank">About</a>
+            <a href="#" target="_blank">Projects</a>
+            <a href="#" target="_blank">Skills</a>
+            <a href="#" target="_blank">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <img src="c:\Users\Laptop Solution\OneDrive\Pictures\DP.jpg" alt="profile pic">
+        </section>
+        <section class="right">
+            <h1>About Me</h1>
+            <p>My name is Samnan Ahmed, and I am the son of Ehsan Ahmed. I am originally from Okara, Pakistan.
+                I completed my Matriculation from DPS College Okara, securing 934 out of 1100 marks,
+                and my Intermediate (FSc) from Punjab Group of Colleges (PGC) Okara, where I scored 799 out of 1100
+                marks.
+                Currently, I am pursuing a Bachelor of Science in Data Science (BSDS) at The University of Okara,
+                and I am in my 4th semester with a current GPA of 3.55.</p>
+            <p>Alongside my academic journey, I have developed a strong interest in web development,
+                which I have been learning on my own.
+                I have gained working knowledge of several programming languages and tools including
+                C++, Python, Object-Oriented Programming (OOP), Data Structures and Algorithms (DSA), Pandas, HTML, and
+                CSS.
+                I am passionate about building real-world projects and constantly improving my skills through
+                self-learning
+                and practice.</p>
+        </section>
+    </main>
+    <footer>&copy; 2025 Samnan Ahmed. All rights reserved.</footer>
+
+</body>
+
+</html>

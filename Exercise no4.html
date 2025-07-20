@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --color: whitesmoke;
+            --seccolor: #3e2723;
+        }
+
+        nav {
+            --seccolor: #000000;
+            background-color: var(--seccolor);
+        }
+
+        ul li {
+            border: 1px solid darkcyan;
+            border-radius: 5px;
+            border-style: none;
+            margin: 5px;
+            padding: 8px;
+            color: var(--color)
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: end;
+        }
+
+        ul li:first-child {
+            background-color: red;
+        }
+
+        ul li:nth-child(2) {
+            background-color: crimson;
+        }
+
+        ul li:nth-child(3) {
+            background-color: brown;
+        }
+
+        ul li:nth-child(4) {
+            background-color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="list"></div>
+    <nav>
+        <ul>
+            <li>Rent</li>
+            <li>Sell</li>
+            <li>Buy</li>
+            <li>Exchange</li>
+        </ul>
+    </nav>
+
+    </div>
+
+</body>
+
+</html>

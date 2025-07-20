@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css Selectors</title>
+    <style>
+        /* Applies a black border and padding to every element inside the .boxes container */
+        .boxes *{
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        /* Targets only the first .box inside the .boxes container and gives it a light blue background */
+        .box:first-child{
+            background-color: rgba(0, 0, 255, 0.397);
+        }
+
+        /* Styles only the first line of text inside the first .box */
+        .box:first-child::first-line{
+            color: brown;
+        }
+
+        /* Selects any element with a data-color attribute set to "primary" and changes its text color */
+        [data-color="primary"]{
+            color: darkcyan;
+        }
+
+        /* Adds content *before* the entire .boxes container using the ::before pseudo-element */
+        .boxes::before{
+            content: "Using before pseudo element";
+        }
+
+        /* Adds content *after* the entire .boxes container using the ::after pseudo-element */
+        .boxes::after{
+            content: "Using after pseudo element";
+        }
+
+        /* Applies styles when the user highlights or selects text on the page */
+        ::selection{
+            color: whitesmoke;
+            background-color: cornflowerblue;
+        }
+
+        /* Styles the first letter of every .box element, making it green and larger in size */
+        .box::first-letter{
+            color: darkgreen;
+            font-size: large;
+        }
+
+        /* Customizes the style of placeholder text inside the input field */
+        input::placeholder{
+            color: cornflowerblue;
+            background-color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">I am a box Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio iure neque, placeat sapiente velit quibusdam. Obcaecati autem sed ipsam in nostrum. Illum ducimus, maiores vitae sunt placeat laboriosam! Mollitia facere iste eius assumenda tempora, illum enim tenetur! Molestias blanditiis ex similique optio voluptatibus ullam pariatur eligendi ipsum itaque? Rerum consequatur reiciendis consequuntur! Accusantium, autem! Beatae dignissimos sed, soluta accusamus voluptatum vero distinctio, porro voluptatem officia vitae labore nam rem aut repellat ducimus neque quidem praesentium ab! Eos, consequuntur dolorum.</div>
+        <div class="box" data-color="primary">I am a box2</div>
+        <div class="box">I am a box3</div>
+        <input type="text" placeholder="Enter text here">
+    </div>
+</body>
+</html>

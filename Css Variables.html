@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in Css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --color:lightblue;
+            --seccolor:darkcyan;
+            --defpad:20px;
+            --defop:0.5;
+        }
+        .nav{
+            background-color:var(--color);
+        }
+        .cont{
+            background-color:var(--seccolor);
+        }
+        ul{
+            display:flex;
+           
+        }
+        ul li{
+            list-style: none;
+             padding:var(--defpad);
+             border:2px solid var(--seccolor);
+             margin:2px;
+             opacity: var(--defop);
+        }
+        ul li:first-child{
+            --color:rgb(85,229,255);
+            background-color: var(--color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul>
+            <li>Hello</li>
+            <li>Hey</li>
+            <li>How</li>
+            <li>Hy</li>
+        </ul>
+    </div>
+    <div class="cont">Hello i am a container</div>
+    
+</body>
+</html>

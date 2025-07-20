@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        :root {
+            --fntsize: small;
+            --fntweight: bold;
+        }
+
+        body {
+            background-color: lightblue;
+            display: inline-flex;
+        }
+
+        .Information {
+            margin-left: 185px;
+            padding: 30px;
+            text-align: center;
+            width: 367px;
+            height: 436px;
+            background-color: #2d78ff;
+            margin-top: 50px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 7px 35px;
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #1C1F26;
+            cursor: pointer;
+        }
+
+        .info-form {
+            padding: 30px;
+            margin-top: 50px;
+            background-color: #ECF0F1;
+            width: 367px;
+            height: 436px;
+        }
+
+        form h1 {
+            color: #788cb0;
+        }
+
+        input[type="text"] {
+            margin: 5px;
+            padding: 6px 10px;
+            width: 340px;
+            border: 2px solid grey;
+            border-radius: 3px;
+            outline: none;
+            text-align: start;
+        }
+
+        label[for="name"],
+        label[for="fname"],
+        label[for="gender"],
+        label[for="txt-area"] {
+            font-size: var(--fntsize);
+            font-weight: var(--fntweight);
+        }
+
+        select {
+            margin: 5px;
+            padding: 6px 10px;
+            width: 363px;
+            border: 2px solid grey;
+            border-radius: 3px;
+            outline: none;
+            text-align: start;
+        }
+
+        textarea {
+            margin: 5px;
+            padding: 6px 10px;
+            width: 340px;
+            height: 75px;
+            border: 2px solid grey;
+            border-radius: 3px;
+            outline: none;
+            text-align: start;
+        }
+
+        input[type="button"] {
+            border: none;
+            border-radius: 5px;
+            padding: 9px 61px;
+            background-color: #3b99f8;
+            color: #ECF0F1;
+            margin-top: 14px;
+            margin-left: 97px;
+        }
+
+        input[type="button"]:hover {
+            cursor: pointer;
+            background-color: #2d78ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Information">
+        <h1>Information</h1>
+        <p>Welcome to our secure registration platform! We believe in providing you with the safest, most reliable,
+            and seamless user experience. By creating your account, you’ll gain access to exclusive content, enhanced
+            services, and real-time support. Choose a strong password to protect your account from unauthorized access.
+        </p>
+
+        <p>🔒 Your privacy and data security are our top priority – We use the latest encryption technologies to keep
+            your personal information safe.
+            📧 Make sure to enter a valid email address for password reset and notifications.
+            🔐 Choose a strong password to protect your account from unauthorized access.</p>
+
+        <button>Read More</button>
+    </div>
+    <div class="info-form">
+        <form>
+            <h1>Registration Form</h1>
+            <label for="name">Name</label> <br>
+            <input type="text" id="name" name="name" placeholder="Name"><br>
+            <label for="fname">Father's Name</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Father's Name"><br>
+            <label for="gender">Select Your Gender:</label><br>
+            <select id="gender" name="gender">
+                <option value="" disabled selected hidden>-Select Your Gender-</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <label for="txt-area">Your Message:</label><br>
+            <textarea name="txt-area" id="txt-area" placeholder="Write your message here..."></textarea><br>
+            <input type="button" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

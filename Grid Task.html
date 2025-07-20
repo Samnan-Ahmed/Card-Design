@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="liTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: "navbar navbar navbar"
+                "aside article article"
+                "card-1 card-2 card-3"
+                "footer footer footer";
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 60px 400px 300px 40px;
+            gap: 10px;
+            padding: 20px;
+            min-height: 120px;
+        }
+
+        .navbar {
+            grid-area: navbar;
+            display: flex;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            justify-content: space-between;
+            padding: 10px;
+
+        }
+
+        nav {
+            margin-top: 8px;
+            font-size: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-right: 15px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+
+        }
+
+        .sidebar {
+            grid-area: aside;
+            background-color: #1a1a1a;
+            color: #d0d0d0;
+
+        }
+
+        .sidebar h2 {
+            margin-top: 12px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .sidebar li {
+            line-height: 40px;
+            font-size: 22px;
+            margin-left: 10px;
+            list-style: none;
+            color: #bbbbbb;
+        }
+
+
+        .article {
+            grid-area: article;
+            background-color: #1c1f26;
+        }
+
+        .article h2 {
+            font-size: 35px;
+            color: #90caf9;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .article p {
+            margin-top: 15px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 22px;
+            color: #e0e0e0;
+        }
+
+        .card-1 {
+            border-radius: 8px;
+            grid-area: card-1;
+            background-color: #2b2f3a;
+        }
+
+        .card-1 h3 {
+            font-size: 30px;
+            margin-top: 10px;
+            text-align: center;
+            color: #f48fb1;
+        }
+
+        .card-1 p:first-of-type {
+            margin-left: 10px;
+            color: #ffccbc;
+        }
+
+        .card-1 p:last-of-type {
+            margin-top: 10px;
+            color: #e0e0e0;
+            font-size: 19px;
+            text-align: center;
+            line-height: 39px;
+        }
+
+        .card-2 {
+            border-radius: 8px;
+            grid-area: card-2;
+            background-color: #263238;
+        }
+
+        .card-2 h3 {
+            font-size: 30px;
+            margin-top: 10px;
+            text-align: center;
+            color: #81d4fa;
+        }
+
+        .card-2 p:first-of-type {
+            margin-left: 10px;
+            color: #b2ebf2;
+        }
+
+        .card-2 p:last-of-type {
+            margin-top: 10px;
+            color: #e0e0e0;
+            font-size: 19px;
+            text-align: center;
+            line-height: 39px;
+        }
+
+        .card-3 {
+            border-radius: 8px;
+            grid-area: card-3;
+            background-color: #1e272e;
+        }
+
+        .card-3 h3 {
+            font-size: 30px;
+            margin-top: 10px;
+            text-align: center;
+            color: #ffd369;
+        }
+
+        .card-3 p:first-of-type {
+            margin-left: 10px;
+            color: #ffeaa7;
+        }
+
+        .card-3 p:last-of-type {
+            margin-top: 10px;
+            color: #e0e0e0;
+            font-size: 19px;
+            text-align: center;
+            line-height: 39px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #1a1a1a;
+            color: #888888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h1>DevNest</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <h2>List of Web development important languages:</h2>
+                <li>Html</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDb</li>
+                <li>TailwandCss</li>
+            </ul>
+        </div>
+        <div class="article">
+            <h2>Welcome to DevNest Blog</h2>
+            <p>
+                DevNest is your go-to space for mastering web development through practical tips, clear tutorials, and
+                modern design principles.
+                Whether you're learning HTML, CSS, or JavaScript, we break down complex topics into easy, step-by-step
+                guides. Stay updated with trends, best practices, and real-world coding strategies to boost your skills
+                and build beautiful, responsive websites. Let DevNest be your daily learning companion on the journey
+                from beginner to pro.
+            </p>
+
+        </div>
+
+        <div class="card-1">
+            <h3>HTML Mastery</h3>
+            <p><strong>Tips</strong></p>
+            <p>
+                Master the building blocks of the web with smart HTML tips. Learn how to structure content, use
+                semantic tags properly, and create accessible layouts. These quick tips help you write cleaner, more
+                effective code that search engines and users both love.
+            </p>
+
+        </div>
+        <div class="card-2">
+            <h3>CSS Secrets</h3>
+            <p><strong>Tricks</strong></p>
+            <p>
+                Unlock powerful CSS tricks to style your websites beautifully. From responsive grids to hover
+                animations, discover how simple tweaks can dramatically improve design. These tricks are perfect for
+                making your site stand out with minimal effort and clean code.
+            </p>
+
+        </div>
+        <div class="card-3">
+            <h3>JavaScript Boost</h3>
+            <p><strong>Tutorials</strong></p>
+            <p>
+                Boost your web interactivity with JavaScript tutorials designed for beginners. Learn how to add
+                dynamic effects, handle user input, and make your site smarter. Each tutorial focuses on real-world
+                functionality that takes your site from static to interactive.
+            </p>
+
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 DevNest.All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

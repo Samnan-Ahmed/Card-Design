@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traansition</title>
+    <style>
+        .container {
+            width: 40vw;
+            border: 2px solid green;
+            height: 50vh;
+            background-color: aquamarine;
+        }
+
+        .box {
+            height: 4vh;
+            width: 5vw;
+            background-color: cornflowerblue;
+            border: 1px solid blue;
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+            transition: all 3s ease;
+        }
+
+        .box:hover {
+            transform: translateX(40vh) translateY(10vw) scale(1.8);
+            border-radius: 50%;
+            background-color: blueviolet;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box transform"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow properties</title>
+    <style>
+        .box {
+            margin: 10px;
+            width: 15vw;
+            height: 15vh;
+            border: 2px solid black;
+            /* Yai hoti hai niche ko scroll dene ke liye mostly */
+            /* overflow:scroll; */
+            /* yai hoti hai ka agar text overflow kr raha to scroll bar dei gi but agar overflow nhi kr raha to scrollbar nahi degi */
+            overflow: auto;
+            /* Yai hoti hai horizontlly scroll bar dene ke liye */
+            white-space: nowrap;
+        }
+
+        .boxy {
+            border: 2px solid cornflowerblue;
+            margin: 10px;
+            height: 20vh;
+            width: 20vw;
+            /* is sy overflow hide ho jata hai */
+            /* overflow: hidden; */
+
+            /* yai 3 akthi lagany sai jaha sai tet overflow hona start hota hai waha sai text ki jaga ... show hony lag jata hai */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        .boxyy {
+            height: 20vh;
+            width: 20vw;
+            margin: 10px;
+            border: 2px solid crimson;
+            /* hum in 2 ka use kar ke bhi overflow both x and y ais pai manually handle kar skty hain */
+
+            /* overflow-x: hidden;
+            overflow-y:auto; */
+
+            /* isy ese bhi likha ja skts hai */
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        My name is samnan and i am writing Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Accusantium a reprehenderit quibusdam alias, laborum illo possimus sequi neque, nobis veritatis eius unde
+        laudantium!
+        Eos nulla architecto tenetur sunt omnis saepe dolore delectus iure provident ex enim blanditiis,
+        et odit earum optio ipsa, culpa aperiam aliquam eveniet assumenda excepturi aliquid veritatis nam sequi.
+        Voluptatem, error? Ratione, corrupti!
+    </div>
+    <div class="boxy">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Velit quasi ex, repellendus eligendi consequatur, necessitatibus est corporis omnis soluta dolorum sed.
+        Deleniti omnis quam dolore voluptate quo facilis dolorum repellendus!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, cupiditate.
+    </div>
+    <div class="boxyy">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, iusto.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus magnam placeat tempore!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos dolor consectetur atque velit?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloremque in quidem soluta ducimus!
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",initial-scale="1.0">
+        <title>Css BoxModel</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1{
+                text-align: center;
+                color:azure;
+                background-color: darkcyan;
+            }
+            .box{
+                font-size: large;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .box1{
+                color:azure;
+                background-color: cornflowerblue;
+                padding:10px;
+                text-align: center;
+                border:2px solid darkslateblue;
+                height: 100px;
+                box-sizing: border-box;
+                margin:25px;
+            }
+            .box2{
+                color:azure;
+                background-color:darkgreen;
+                padding:10px;
+                text-align: center;
+                border: 2px solid darkblue;
+                height: 100px;
+                margin:20px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Model</h1>
+        <div class="box box1">
+            <p>Hey, i am box number one.</p>
+        </div>
+        <div class="box box2">
+            <p>Hey, i am box number two.</p>
+        </div>
+    </body>    

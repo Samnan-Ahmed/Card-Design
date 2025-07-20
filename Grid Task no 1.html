@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Practice Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset and basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 🔲 Grid Container */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "navbar navbar navbar"
+        "sidebar article article"
+        "card1 card2 card3"
+        "footer footer footer";
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    /* 🔷 Navbar (Top full row) */
+    .navbar {
+      grid-area: navbar;
+      background-color: #0984e3;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* 🔹 Sidebar (Left column of 2nd row) */
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #74b9ff;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    /* 🔸 Article (Right side of 2nd row) */
+    .article {
+      grid-area: article;
+      background-color: #81ecec;
+      padding: 15px;
+    }
+
+    /* 🟡 Cards in row 3 (3 columns) */
+    .card1, .card2, .card3 {
+      background-color: #ffeaa7;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .card1 { grid-area: card1; }
+    .card2 { grid-area: card2; }
+    .card3 { grid-area: card3; }
+
+    /* ⚫ Footer (bottom full row) */
+    .footer {
+      grid-area: footer;
+      background-color: #636e72;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="navbar">WebNest | Home | About | Contact</div>
+
+    <div class="sidebar">
+      <h3>Services</h3>
+      <ul>
+        <li>Web Hosting</li>
+        <li>Design</li>
+        <li>SEO</li>
+      </ul>
+    </div>
+
+    <div class="article">
+      <h2>Our Services</h2>
+      <p>We offer fast, reliable and affordable web solutions to help grow your business online.</p>
+    </div>
+
+    <div class="card1">Fast</div>
+    <div class="card2">Reliable</div>
+    <div class="card3">Affordable</div>
+
+    <div class="footer">© 2025 WebNest. All rights reserved.</div>
+  </div>
+
+</body>
+</html>
